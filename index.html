@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Stop-Watch</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- External CSS File Link -->
+  <link rel="stylesheet" href="./style.css" />
+
+  <!-- External JS File Link -->
+
+  <!-- Favicon Icon-->
+  <link rel="icon" type="image/png" href="./img/favicon.png" />
+
+
+
+  <!-- FontAwesome CDN-->
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <!-- Bootstrap CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body align="center">
+
+  <nav class="navbar navbar-default  navbar-expand-lg  bg-white thinner navcol" >
+    <div class="container-fluid" >
+        <div class="maintitle" align="center">
+          <img src="./img/logo.gif"
+            style="height: 3rem; width: 3rem;margin-right:1rem; font-weight:bold" align="center" alt=""> <span id="title1"><h1>Stop Watch</h1></span>
+        </div>
+         
+        </div>
+      </div>
+  </nav>
+  <div class="container-fluid" >
+    <div id="container" align="center">
+      <div>
+        <div id="time">
+          <span>
+            <span class="digit" id="hr">00</span>
+            <span class="txt">Hr</span>
+          </span>
+          <span>
+            <span class="digit" id="min">00</span>
+            <span class="txt">Min</span>
+          </span>
+          <span>
+            <span class="digit" id="sec">00</span>
+            <span class="txt">Sec</span>
+          </span>
+          <span>
+            <span class="digit" id="count">00</span>
+            <span class="txt">Ms</span>
+          </span>
+        </div>
+        <span class="todayDate">
+          <h3><span id="d1"></span></h3>
+        </span>
+      </div>
+      <hr />
+      <div id="btn-container">
+        <button class="buttons" id="start" onclick="start()">
+          <i class="fas fa-play-circle"></i> Start
+        </button>
+        <!--   <button class="btn" id="stop" onclick="stop()">Stop</button> -->
+        <button class="buttons" id="reset" onclick="reset()">
+          <i class="fas fa-undo"></i> Reset
+        </button>
+        <button class="buttons" id="lap" onclick="lap()">
+          <i class="fas fa-stopwatch"></i> Lap
+        </button>
+        <button class="buttons" id="clearlap" onclick="clearLap()">
+          <i class="fas fa-trash"></i> Clear Lap
+        </button>
+      </div>
+      <div>
+        <div id="record-container">
+          <table id="record-table">
+            <tr>
+              <th>Lap Number</th>
+              <th>Time</th>
+              <th>Diff</th>
+            </tr>
+            <tbody id="record-table-body"></tbody>
+          </table>
+        </div>
+      </div>
+      <hr />
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    // start or stop stopwatch using "spacebar" key
+    document.addEventListener("keyup", (event) => {
+      if (event.code === "Space") {
+        start();
+      }
+    });
+    document.addEventListener("keyup", (event) => {
+      if (event.code === "Backspace") {
+        reset();
+      }
+    });
+    document.addEventListener("keyup", (event) => {
+      if (event.code === "Enter") {
+        lap();
+      }
+    });
+
+    document.addEventListener("keyup", (event) => {
+      if (event.code === "Numpad0") {
+        clearLap();
+      }
+    });
+  </script>
+  <script src="script.js"></script>
+
+  <footer>
+    <div class="container" align="center" >
+      <div class="card photo-card">
+        <div class="content-wrapper"style="float: left;" align="center">
+          <img src="img/me.jpg" alt="Your Photo" style="width: 150px; border-radius: 50%;float: left;margin: 20;">
+          <div style="background-color: aqua; float: left;" align="center">
+            <h3>Mohammed Arbaz Salim Khan</h3>
+            <p>M.Sc-Information Technology [2024]</p>
+            <p>Patkar Varde College</p>
+            <p>Web Developer</p>
+            <p>Intern at Prodigy InfoTech</p>
+            <a href="https://drive.google.com/file/d/1e7zKF9BFph0_XqurPzzoQIyMAZxqxHam/view?usp=sharing"><h3>Resume</h3></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <Br><p align="center">&copy; 2024 My Website. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

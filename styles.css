@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+.navbar {
+  background-color: #333;
+  color: rgb(9, 216, 43);
+  padding: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  animation: navbarFadeIn 2s ease;
+}
+
+@keyframes navbarFadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.maintitle {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #4CAF50;
+  animation: titlePulse 2s infinite;
+}
+
+@keyframes titlePulse {
+  0% {color: #4CAF50;}
+  50% {color: #ee7752;}
+  100% {color: #4CAF50;}
+}
+
+#container {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: containerSlideIn 2s ease;
+}
+
+@keyframes containerSlideIn {
+  0% {transform: translateX(-100%);}
+  100% {transform: translateX(0);}
+}
+
+#time {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  animation: timePulse 1s infinite;
+}
+
+@keyframes timePulse {
+  0% {color: #333;}
+  50% {color: #ee7752;}
+  100% {color: #333;}
+}
+
+.buttons {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition-duration: 0.4s;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: buttonFloat 2s infinite;
+}
+
+@keyframes buttonFloat {
+  0% {transform: translateY(0px);}
+  50% {transform: translateY(-10px);}
+  100% {transform: translateY(0px);}
+}
+
+.buttons:hover {
+  background-color: white;
+  color: #4CAF50;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+#record-table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  animation: tableFadeIn 2s ease;
+}
+
+@keyframes tableFadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+#record-table th, #record-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  animation: footerSlideIn 2s ease;
+}
+
+@keyframes footerSlideIn {
+  0% {transform: translateY(100%);}
+  100% {transform: translateY(0);}
+}
